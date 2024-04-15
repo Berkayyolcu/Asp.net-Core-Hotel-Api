@@ -1,7 +1,7 @@
 # Asp.net-Core-Hotel-Api
 
 
-<img src="https://github.com/Berkayyolcu/Asp.net-Core-Hotel-Api/blob/main/screenshot/slider_ve_menü.PNG" width="auto">
+<img src="https://github.com/Berkayyolcu/Asp.net-Core-Hotel-Api/blob/main/screenshot/slider_menü.PNG" width="auto">
 <br>
 <img src="https://github.com/Berkayyolcu/Asp.net-Core-Hotel-Api/blob/main/screenshot/hakkımızda.PNG" width="auto">
 <br>
