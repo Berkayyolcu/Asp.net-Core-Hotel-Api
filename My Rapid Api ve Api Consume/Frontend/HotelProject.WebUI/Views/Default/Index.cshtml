@@ -1,0 +1,59 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- _HeadPartial -->
+    @await Component.InvokeAsync("_HeadPartial");
+
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        <!-- _SpinnerPartial -->
+        @await Component.InvokeAsync("_SpinnerPartial")
+
+        <!-- _NavbarPartial -->
+        @await Component.InvokeAsync("_NavbarPartial")
+
+        <!-- _SliderPartial -->
+        @await Component.InvokeAsync("_SliderPartial")
+
+        <!-- Booking -->
+       @*  @await Component.InvokeAsync("_ReservationPartial") *@
+
+        <!-- _AboutUsPartial -->
+        @await Component.InvokeAsync("_AboutUsPartial")
+
+        <!-- _OurRoomsPartial -->
+        @await Component.InvokeAsync("_OurRoomsPartial")
+
+        <!-- _TrailerPartial -->
+        @await Component.InvokeAsync("_TrailerPartial")
+
+        <!-- _ServicePartial -->
+        @await Component.InvokeAsync("_ServicePartial")
+       
+        <!-- _TestimonialPartial -->
+        @await Component.InvokeAsync("_TestimonialPartial")
+
+        <!-- _TeamPartial -->
+        @await Component.InvokeAsync("_TeamPartial")
+
+        <!-- _SubscribePartial -->
+        @await Html.PartialAsync("_SubscribePartial")
+
+        <!-- _FooterPartial -->
+        @await Component.InvokeAsync("_FooterPartial")
+       
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- _ScriptPartia -->
+    @await Component.InvokeAsync("_ScriptPartial");
+
+</body>
+</html>

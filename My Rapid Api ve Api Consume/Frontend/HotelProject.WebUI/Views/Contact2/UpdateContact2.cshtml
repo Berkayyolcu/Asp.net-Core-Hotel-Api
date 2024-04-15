@@ -1,0 +1,57 @@
+﻿@using HotelProject.WebUI.Dtos.Contact2Dto
+@model UpdateContact2Dto
+
+@{
+    ViewData["Title"] = "UpdateContact2";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<form method="post">
+    <input type="hidden" asp-for="Contact2ID" />
+
+    <label> Mail Adresi </label>
+    <input type="text" asp-for="Mail" class="form-control" />
+    <br />
+
+    <label> Telefon Numarası </label>
+    <input type="text" asp-for="Number" class="form-control" />
+    <br />
+
+    <label> Mahalle </label>
+    <input type="text" asp-for="Mahalle" class="form-control" />
+    <br />
+
+    <label> İl </label>
+    <input type="text" asp-for="İl" class="form-control" />
+    <br />
+
+    <label> İlçe</label>
+    <input type="text" asp-for="İlçe" class="form-control" />
+    <br />
+
+    <label> Adres</label>
+    <input type="text" asp-for="Adres" class="form-control" />
+    <br />
+
+    <label> Booking Mail </label>
+    <input type="text" asp-for="MailBooking" class="form-control" />
+    <br />
+
+    <label> Mail Adresi </label>
+    <input type="text" asp-for="Mail2" class="form-control" />
+    <br />
+
+    <label> Tecnihal Mail </label>
+    <input type="text" asp-for="MailTecnihal" class="form-control" />
+    <br />
+
+    <label> General Mail </label>
+    <input type="text" asp-for="MailGeneral" class="form-control" />
+    <br />
+
+    <label> Konum </label>
+    <input type="text" asp-for="Konum" class="form-control" />
+    <br />
+
+    <button class="btn mb-1 btn-rounded btn-outline-warning">İletişim Bilgileri Güncelle</button>
+</form>

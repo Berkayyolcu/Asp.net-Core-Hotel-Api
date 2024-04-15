@@ -1,0 +1,52 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+
+namespace HotelProject.DataAccessLayer.Migrations
+{
+    public partial class migadd_about : Migration
+    {
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.AlterColumn<string>(
+                name: "Name",
+                table: "AspNetUsers",
+                type: "nvarchar(max)",
+                nullable: true,
+                oldClrType: typeof(int),
+                oldType: "int");
+
+            migrationBuilder.CreateTable(
+                name: "Abouts",
+                columns: table => new
+                {
+                    AboutID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Title1 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Title2 = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Content = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    RoomCount = table.Column<int>(type: "int", nullable: false),
+                    StaffCount = table.Column<int>(type: "int", nullable: false),
+                    CustomerCount = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Abouts", x => x.AboutID);
+                });
+        }
+
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.DropTable(
+                name: "Abouts");
+
+            migrationBuilder.AlterColumn<int>(
+                name: "Name",
+                table: "AspNetUsers",
+                type: "int",
+                nullable: false,
+                defaultValue: 0,
+                oldClrType: typeof(string),
+                oldType: "nvarchar(max)",
+                oldNullable: true);
+        }
+    }
+}

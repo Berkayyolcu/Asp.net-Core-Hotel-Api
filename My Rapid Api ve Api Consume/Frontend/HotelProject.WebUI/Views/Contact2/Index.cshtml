@@ -1,0 +1,54 @@
+﻿@using HotelProject.WebUI.Dtos.Contact2Dto
+@model List<ResultContact2Dto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/AdminLayout/_AdminLayout.cshtml";
+}
+
+<div class="table-responsive">
+
+    <h4>İletişim Bilgileri</h4>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Mail Adresi</th>
+                <th>Telefon Numarası</th>
+                <th>Mahalle</th>
+                <th>İl</th>
+                <th>İlçe</th>
+                <th>Booking Mail</th>
+                <th>Mail Adresi</th>
+                <th>Tecnihal Mail</th>
+                <th>General Mail</th>
+                <th>Adres</th>
+                @* <th>Konum</th> *@
+                <th>Güncelle</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th>@item.Contact2ID</th>
+                    <td>@item.Mail</td>
+                    <td>@item.Number</td>
+                    <td>@item.Mahalle</td>
+                    <td>@item.İl</td>
+                    <td>@item.İlçe</td>
+                    <td>@item.MailBooking</td>
+                    <td>@item.Mail2</td>
+                    <td>@item.MailTecnihal</td>
+                    <td>@item.MailGeneral</td>
+                    <td>@item.Adres</td>
+                   @*  <td>@item.Konum</td> *@
+                    <td> <a href="/Contact2/UpdateContact2/@item.Contact2ID" class="btn mb-1 btn-rounded btn-outline-warning">Güncelle</a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

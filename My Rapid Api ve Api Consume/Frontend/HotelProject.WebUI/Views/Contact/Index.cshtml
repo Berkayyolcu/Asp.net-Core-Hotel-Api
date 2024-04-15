@@ -1,0 +1,42 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- _HeadPartial -->
+@await Component.InvokeAsync("_HeadPartial");
+
+<body>
+    <div class="container-xxl bg-white p-0">
+
+        <!-- _SpinnerPartial -->
+        @await Component.InvokeAsync("_SpinnerPartial")
+
+        <!-- _NavbarPartial -->
+        @await Component.InvokeAsync("_NavbarPartial")
+        
+        <!-- B_ContactCoverPartial -->
+        @await Component.InvokeAsync("_ContactCoverPartial")
+        
+        <!-- SendMessage -->
+        @await Html.PartialAsync("/Views/Contact/SendMessage.cshtml")
+
+        @*<!-- Booking -->
+        @await Component.InvokeAsync("_ReservationPartial") *@
+
+        <!-- _SubscribePartial -->
+        @await Html.PartialAsync("/Views/Default/_SubscribePartial.cshtml")
+
+        <!-- _FooterPartial -->
+        @await Component.InvokeAsync("_FooterPartial")
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+
+    <!-- _ScriptPartial -->
+    @await Component.InvokeAsync("_ScriptPartial")
+</body>
+</html>
